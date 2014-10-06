@@ -14,6 +14,9 @@ group :development do
   gem 'sqlite3'
 end
 
+#faker gem
+gem 'faker'
+
 #bootstrap gem
 gem 'bootstrap-sass', '3.1.1'
 
