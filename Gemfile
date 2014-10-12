@@ -17,6 +17,10 @@ end
 #faker gem
 gem 'faker'
 
+
+#devise gem for user creation, security etc. see git page for more info
+gem 'devise'
+
 #bootstrap gem
 gem 'bootstrap-sass', '3.1.1'
 
