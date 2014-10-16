@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
+    #binding.pry
     @topic = Topic.find(params[:topic_id])
     @post = current_user.posts.build(params.require(:post).permit(:title, :body)) 
     authorize @post
