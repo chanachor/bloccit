@@ -58,6 +58,9 @@ end
 
  gem 'figaro', '1.0'
 
+#Use for markdown language
+gem 'redcarpet'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
