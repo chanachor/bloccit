@@ -21,6 +21,9 @@ gem 'faker'
 #devise gem for user creation, security etc. see git page for more info
 gem 'devise'
 
+#pundit gem for authorization of roles
+gem 'pundit'
+
 #bootstrap gem
 gem 'bootstrap-sass', '3.1.1'
 
