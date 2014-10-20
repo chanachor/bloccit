@@ -13,6 +13,7 @@
 
     <p class="comment_input"> <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %> </p>
   <%= render partial: 'comments/comment'%>
+  <%= will_paginate @comments %>
   </div>
 
   <div class="col-md-4">
