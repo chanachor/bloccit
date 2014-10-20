@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   def markdown_name
     render_as_markdown name
