@@ -4,7 +4,7 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def create?
-    user.present? && user.admin?
+    user.present?
   end
 
 end
