@@ -1,3 +1,5 @@
-<%= form_for [topic, post, post.comments.new] do |f| %>
+<% if policy(Comment.new).create? %>
+  <%= form_for [topic, post, post.comments.new] do |f| %>
     <h4 class="pull-left"> Comment: </h4> <%= f.text_field :body, class: 'form-control', placeholder: "Enter comment" %> <%= f.submit "Add Comment", class: 'btn btn-success pull-right' %>
-<% end %> 
+  <% end %>
+<% end %>
