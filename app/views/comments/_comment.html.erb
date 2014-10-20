@@ -1,0 +1,7 @@
+<h5 class="comment_input highlight" "inline"><%= @comments.count %> previously posted comments.</h5>
+<% @comments.each do |comment| %>
+  <p class="comment"> <%= comment.body %> </p>
+  <small>
+    <%= image_tag(comment.user.avatar.tiny.url) if comment.user.avatar? %> submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.name %>
+  </small>
+<% end %>
