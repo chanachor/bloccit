@@ -8,7 +8,7 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.present? && (user.admin? || user.moderator? || record.user == user)
+    user.present? && can_moderate?
   end
 
 end
