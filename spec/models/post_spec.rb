@@ -3,7 +3,13 @@ require 'rails_helper'
 describe Post do
   describe "vote methods" do
     before do
-      @post = Post.create(title: 'post title', body: 'post body')
+      @topic = Topic.create(name: 'test topic', description: 'this is a test topic to get this to work.' )
+      @user = User.create
+      @post = Post.create(
+                title: 'post title', 
+                body: 'post body,post bodypost bodypost body',
+                topic: @topic,
+                user: @user)
       3.times { @post.votes.create(value: 1)}
       2.times { @post.votes.create(value: -1)}
     end
@@ -22,7 +28,7 @@ describe Post do
 
     describe '#points' do
       it "returns the sum of all down and up votes" do
-        expect ( @post.points ).to eq(1) #3-2
+        expect( @post.points ).to eq(1) #3-2
       end
     end
   end
